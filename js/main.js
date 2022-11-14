@@ -1,23 +1,3 @@
-// 검색창
-
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function() {
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder','통합검색');
-});
-
-searchInputEl.addEventListener('blur', function() {
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder','');
-});
-
-
 
 // 스크롤 시 나타났다 사라졌다 (배너, 페이지 상단 이동)
 
@@ -165,9 +145,4 @@ spyEls.forEach(function (spyEl) {
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
-
-
-// 날짜
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //2022 -> this year 로 들어감
 
